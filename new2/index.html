@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Kisima cha Baraka, where we provide support and guidance.">
+    <title>KUKUcare Tanzania | Your patner on profitable poultry care </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+          /*  font-family: Georgia, 'Times New Roman', Times, serif;*/
+            text-align: center;
+            position: relative;
+            font-family: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #f5f1f1;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('6.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        header {
+            color: #0a4a02;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            background-color: #ffab1f;
+            justify-content: center;
+        }
+        .logo img {
+            border-radius: 30px;
+            width: 100px;
+           
+            height: auto;
+        }
+        h1 {
+           font-size: 25px;
+            margin-left: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        nav {
+            background-color: rgb(36, 129, 155);
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: square;
+            display: flex;
+            padding-left: 0;
+            justify-content: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: wavy;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #e1d609;
+            color: #0c0e0c;
+        }
+        section {
+            margin: 2rem;
+            background-color: rgb(248, 242, 242);
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgb(250, 247, 247);
+            text-align: center;
+            border-radius: 8px;
+        }
+        footer {
+            background-color:black;
+            color: #c1bdbd;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+           display: flex;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                background-color: #ffab1f;
+            }
+            .logo img {
+                width: 80px;
+            }
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        .scroll-top-wrapper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+        }
+        .scroll-top-wrapper.show {
+            display: block;
+        }
+        .scroll-top-inner {
+            background-color: #ffab1f;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .scroll-top-text {
+            font-size: 15px;
+        }
+        .scroll-top-inner i {
+            font-size: 20px;
+        }
+        .map-container {
+            height: 400px;
+            background-color: white;
+        }
+        .welcome-note {
+            height: 400px;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgb(77, 62, 62);
+            border-radius: 8px;
+            text-align: left;
+            overflow: auto;
+        }
+        
+
+        .slider-container {
+            height: 200px; /* Ensure the container has a fixed height */
+        }
+        .carousel-item {
+            height: 50%; /* Ensure carousel items take up full height */
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 200px;
+            object-fit:unset;
+            } /* Ensure images cover the container */
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 15px;
+        }
+       
+        .advertisements {
+            background-color: white;
+            color: rgb(29, 28, 28);
+            padding: 2rem 0;
+        }
+        .advertisements h2 {
+            margin-bottom: 1rem;
+        }
+        .advertisement-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .advertisement-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        .contact-us {
+            background-color: rgba(150, 162, 182, 0.918);
+            color: rgb(87, 3, 3);
+            padding: 2rem 0;
+        }
+        .contact-us h2 {
+            margin-bottom: 1rem;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: left;
+            gap: 0.5rem;
+            font-size: 1.1em;
+        }
+        .contact-item i {
+            font-size: 1.5em;
+        }
+        .contact-item p {
+            margin: 0;
+        }
+        .contact-item a {
+            color: #1a1918;
+            text-decoration: none;
+        }
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+            }
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(200px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+     <img src="image/logo.jpg.jpg" alt="Logo ya kukucare">
+        </div>
+        <h1 >Kukucare Tanzania | Your patner in poultry care</h1>
+    </header>
+    <nav class= "navbar navbar-expand-lg navbar-light"> <h4>Airport Road, Dar Es Salaam, Tanzania</h4>
+   <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbarnav" aria-controls="#navbarnav" aria-expanded="false" aria-label="toggle navication" > 
+   <span class="navbar-toggler-icon"></span> 
+   </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-Nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+   </div>
+    </nav>
+
+  
+            <!-- Welcome Note Column -->
+            
+                <h2 class="fade-in-up">Welcome to our website</h2>
+                <p class="fade-in-up">"Welcome to kukucare Tanzania your trusted source of organic poultry feed and treatments."
+                
+                </p>
+                <img src="image/mimi.png"  alt="Welcome Image" class="fade-in-up" style="width: 900px;height: 500px;" >
+            </div>
+        </div>
+
+       
+        
+                <div class="advertisement-item fade-in-up text-align relative">
+
+                    <h4>OUR PRODUCTS </h4>
+                    <h5>1.STOMACH HERBS ULTRA</h5>
+                    <p>VIUNGO NA MITISHAMBA KWA AJILI YA KINGA NA TIBA DHIDI YA;-</p>
+                    <ul>
+                        <li type="align-items" >KUHARISHA DAMU/UGORO</li>
+                        <li>KIPINDUPINDU</li>
+                        <li>TYPHOID</li>
+                        <li>KUHARISHA MAJI/NYEUPE</li>
+                    </ul>
+                </div>
+                <div class="advertisement-item fade-in-up">
+                    <h5>2.AMAZON-7</h5>
+                    <p>VIRUTUBISHO ASILIA MCHANGANYIKO WA TANGAWIZI,MANJANO,MDALASINI,PILIPILI MTAMA,KITUNGUU SAUMU,ALOEVERA. FAIDA 7 ZA KUTUMIA;-</p>
+                <ol>
+                    <li>KUONGEZA KINGA YA MWILI YA ASILI, KUKINGA NA KUPAMBANA NA MAGONJWA.</li>
+                    <li>KUCHOCHEA UKUAJI, UTAGAJI NA AFYA BORA YA KUKU/NDEGE WAFUGWAO.</li>
+                    <li>KINGA NATIBA DHIDI YA MAGONJWA YA MATUMBO, MAFUA, KUDUMAA NA MFUMO WA UPUMUAJI</li>
+                    <li>KUONDOA SUMU MWILI ZA CHAKULA NA DAWA ZA KIKEMIKALI.</li>
+                    <li>KUONDOA USUGU WA MAGONJWA NA KUZOEA DAWA.</li>
+                    <li>KUONGEZA UFANISI WA DAWA ZA KIKEMIKALI ZIKITUMIWA PAMOJA NA E.M.MOLASSAS N.K</li>
+                    <li>KUPUNGUZA GHARAMA ZA UFUGAJI NA KUMPA MFUGAJI FAIDA YA ZIADA.</li>
+                </ol> </div>
+                <div class="advertisement-item fade-in-up">
+                 <h5 class="About Us" > About Us</h5>
+                 <p>We are the company dealing with solving poultry farmers challenges of diseases, stunted growth and lack of reliable and worthy market of their products</p>
+                 <img src="image/babaa.png" alt="Image 1" style="width: 1100px;height: 500px; " >
+                
+                </div>
+                
+                <div class="advertisement-item fade-in-up">
+                   <h5 class="Our Services">Our Services</h5>
+                   <p>we supply organic poultry feeds and natural herbal treatments, our premium high-quality products grant better health and wealth.</p>
+                   <p>We are providing knowledge and practical training as well as access to herbs and spices to poultry farmers which are very essential in preventing and treating poultry related diseases, Boost natural immunity, increase production of eggs and meat thus increasing their income while promoting healthy living.</p>
+                   <img src="image/mamaa.png" alt="Image 1" style="width: 1100px;height: 500px; " >
+                   
+                </div>
+                
+                <div class="advertisement-item fade-in-up">
+                    <h5>A Note From C.E.O</h5>
+                    <h6>"Dear Valued Partner</h6>
+                    <p>Welcome to KuKuCare! As A CEO, I'm thrilled to introduce you to our commitment to advancing poultry farming through high-quality organic feed and treatments</p>
+                    <h5>Our Mission</h5>
+                    <p>To support your success by providing solutions that enhance the health and productivity of your flock.</p>
+                    <p>Thank you for choosing us as your partner in poultry care. Together, let's foster a thriving, sustanable future for poultry farming.</p>
+                    <p>Warm regards,</p>
+                    <p>Hussein Ayoub Karanda.</p>
+                    <p>CEO,KuKuCare"</p>
+                </div>
+            </div>
+                    <!-- Image Slider Column -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/stomach.jpg" alt="Image 1" style="width: 1100px;height: 500px; " >
+                <div class="carousel-caption">
+                    <h5>Stomach Herbs Ultra</h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/amazon.png"  alt="Image 2" style="width: 1100px;height: 500px;">
+                <div class="carousel-caption">
+                    <h5>Amazon-7</h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/combo.png" alt="Image 3" style="width: 1100px;height:500px;" >
+                <div class="carousel-caption">
+                    
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/logo.png"  alt="Image 4" style="width: 1100px;height: 500px;" >
+                <div class="carousel-caption">
+                
+                   
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Column -->
+    <div class="row mt-4">
+        <div class="col-lg-12 col-md-12 contact-us" id="contact">
+            <h2 class="fade-in-up">Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item fade-in-up">
+                    <i class="fas fa-phone"></i>
+                    <p><a href="tel:+255624740012" "+25588654574">+255624740012 / +25588654574 </a></p>
+                </div>
+                <div class="contact-item fade-in-up">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:kukucare@gmail.com">kukucare@gmail.com</a>.</p>
+                </div>
+                <div class="contact-item fade-in-up">
+                    <i class="fas fa-map-marker-altS"> </i>
+                    <p>P.O.Box 78697, Dar Es Salaam, Tanzania</p>
+                </div>
+                </i>
+                <div class="contact-item fade-in-up">
+               <i class="fa fade-in-up">
+                    <p style="text-align: center;">Airport Street, Dar Es Salaam, Tanzania</p>
+                </div>
+                
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <footer>
+               <p>&copy; 2024 KuKuCare Tanzania. All rights reserved.</p>
+       </div>
+       </footer>
+
+
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top-wrapper" id="scroll-top-wrapper">
+        <div class="scroll-top-inner">
+            <i class="fa fade-in-up"></i>
+            <span class="scroll-top-text">Scroll to top</span>
+        </div>
+    </div>
+<div>
+ <footer>
+        <p>&copy; 2024 KuKuCare Tanzania. All rights reserved.</p>
+</div>
+</footer>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript for scroll-to-top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollTopWrapper = document.getElementById('scroll-top-wrapper');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    scrollTopWrapper.classList.add('show');
+                } else {
+                    scrollTopWrapper.classList.remove('show');
+                }
+            });
+
+            scrollTopWrapper.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // JavaScript for fade-in-up effect
+        document.addEventListener('DOMContentLoaded', function() {
+            function handleScrollEffects() {
+                const elements = document.querySelectorAll('.fade-in-up');
+                const windowHeight = window.innerHeight;
+
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < windowHeight - 100) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScrollEffects);
+            handleScrollEffects();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
